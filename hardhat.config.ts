@@ -5,41 +5,41 @@ require('dotenv').config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.17',
+    version: "0.8.17",
   },
   networks: {
     // for mainnet
-    'base-mainnet': {
-      url: 'https://developer-access-mainnet.base.org',
+    "base-mainnet": {
+      url: "https://developer-access-mainnet.base.org",
       accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
     // for testnet
-    'base-goerli': {
-      url: 'https://goerli.base.org',
+    "base-goerli": {
+      url: "https://goerli.base.org",
       accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
     // for local dev environment
-    'base-local': {
-      url: 'http://localhost:8545',
+    "base-local": {
+      url: "http://localhost:8545",
       accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
   },
-  defaultNetwork: 'base-goerli',
+  defaultNetwork: "base-goerli",
 
   etherscan: {
     apiKey: {
-      "base-goerli": "YOUR_ETHERSCAN_API_KEY",
+      "base-goerli": "2XVM5Z153Y5PWU8NUHYR5VK45Q2W74X1J6",
     },
     customChains: [
       {
         network: "base-goerli",
         chainId: 84531,
         urls: {
-          apiURL: "https://api-goerli.basescan.org/api",
-          browserURL: "https://goerli.basescan.org",
+          apiURL: "https://api.basescan.org/api",
+          browserURL: "https://basescan.org",
         },
       },
     ],

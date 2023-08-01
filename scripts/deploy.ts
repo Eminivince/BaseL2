@@ -1,11 +1,11 @@
-import { ethers } from 'hardhat';
+import { ethers } from "hardhat";
 
 async function main() {
-  const linearDex = await ethers.deployContract('LinearDex');
+  const linearDex = await ethers.deployContract("LinearDexPCP");
 
   await linearDex.waitForDeployment();
 
-  console.log('LinearDex Contract Deployed at ' + linearDex.target);
+  console.log("LinearDexPCP Contract Deployed at " + linearDex.target);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
